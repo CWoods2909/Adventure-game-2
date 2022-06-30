@@ -44,8 +44,8 @@ class Room {
     }
 
     getItemByName(name) {
-
-        // Fill this in
+        if(this.name === name)
+            return name;
     }
 
 }

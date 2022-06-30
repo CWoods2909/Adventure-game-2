@@ -1,13 +1,14 @@
-class Player {
+const Item = require("./item");
 
+class Player extends Item {
     constructor(name, startingRoom) {
+        super(name);
         this.name = name;
         this.currentRoom = startingRoom;
         this.items = [];
     }
 
     move(direction) {
-
         const nextRoom = this.currentRoom.getRoomInDirection(direction);
 
         // If the next room is valid, set the player to be in that room
@@ -32,8 +33,6 @@ class Player {
     }
 
     takeItem(itemName) {
-
-        // Fill this in
 
     }
 
